@@ -1,0 +1,919 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='clics_2+' inline='true' name='federated.1j3fqnk1900mbb135kgzu03b06uo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='click_3' name='textscan.1azw6ga0411k4616xt0ks0zhsli8'>
+            <connection class='textscan' directory='C:/Users/utilisateur/Documents/Brief_ Minority Report/mission1' filename='click_3.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='achats' name='textscan.07uv3m01panrpk1930fi21mxzcdh'>
+            <connection class='textscan' directory='C:/Users/utilisateur/Documents/Brief_ Minority Report/mission1' filename='achats.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='impressions' name='textscan.0igw5pn0n5aex01bfaj490jh0zyc'>
+            <connection class='textscan' directory='C:/Users/utilisateur/Documents/Brief_ Minority Report/mission1' filename='impressions.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.07uv3m01panrpk1930fi21mxzcdh' name='achats.csv' table='[achats#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+            <column datatype='integer' name='timestamp' ordinal='0' />
+            <column datatype='integer' name='cookie_id' ordinal='1' />
+            <column datatype='integer' name='product_id' ordinal='2' />
+            <column datatype='string' name='gender' ordinal='3' />
+            <column datatype='integer' name='dept' ordinal='4' />
+            <column datatype='integer' name='price' ordinal='5' />
+            <column datatype='integer' name='age' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.07uv3m01panrpk1930fi21mxzcdh' name='achats.csv' table='[achats#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+              <column datatype='integer' name='timestamp' ordinal='0' />
+              <column datatype='integer' name='cookie_id' ordinal='1' />
+              <column datatype='integer' name='product_id' ordinal='2' />
+              <column datatype='string' name='gender' ordinal='3' />
+              <column datatype='integer' name='dept' ordinal='4' />
+              <column datatype='integer' name='price' ordinal='5' />
+              <column datatype='integer' name='age' ordinal='6' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1azw6ga0411k4616xt0ks0zhsli8' name='click_3.csv' table='[click_3#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=';'>
+              <column datatype='integer' name='timestamp' ordinal='0' />
+              <column datatype='integer' name='cookie_id' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1azw6ga0411k4616xt0ks0zhsli8' name='impressions.csv' table='[impressions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+              <column datatype='integer' name='timestamp' ordinal='0' />
+              <column datatype='integer' name='cookie_id' ordinal='1' />
+              <column datatype='integer' name='campaign_id' ordinal='2' />
+              <column datatype='integer' name='external_site_id' ordinal='3' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[age]' value='[achats.csv].[age]' />
+          <map key='[campaign_id]' value='[impressions.csv].[campaign_id]' />
+          <map key='[cookie_id (click_3.csv)]' value='[click_3.csv].[cookie_id]' />
+          <map key='[cookie_id (impressions.csv)]' value='[impressions.csv].[cookie_id]' />
+          <map key='[cookie_id]' value='[achats.csv].[cookie_id]' />
+          <map key='[dept]' value='[achats.csv].[dept]' />
+          <map key='[external_site_id]' value='[impressions.csv].[external_site_id]' />
+          <map key='[gender]' value='[achats.csv].[gender]' />
+          <map key='[price]' value='[achats.csv].[price]' />
+          <map key='[product_id]' value='[achats.csv].[product_id]' />
+          <map key='[timestamp (click_3.csv)]' value='[click_3.csv].[timestamp]' />
+          <map key='[timestamp (impressions.csv)]' value='[impressions.csv].[timestamp]' />
+          <map key='[timestamp]' value='[achats.csv].[timestamp]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[click_3.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[impressions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[timestamp]</local-name>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[achats.csv_9EB482B50D104BE28F13FF4BA1647872]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cookie_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cookie_id]</local-name>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias>cookie_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[achats.csv_9EB482B50D104BE28F13FF4BA1647872]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[achats.csv_9EB482B50D104BE28F13FF4BA1647872]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[achats.csv_9EB482B50D104BE28F13FF4BA1647872]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dept</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dept]</local-name>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias>dept</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[achats.csv_9EB482B50D104BE28F13FF4BA1647872]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[achats.csv_9EB482B50D104BE28F13FF4BA1647872]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[achats.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[achats.csv_9EB482B50D104BE28F13FF4BA1647872]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[timestamp (click_3.csv)]</local-name>
+            <parent-name>[click_3.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cookie_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cookie_id (click_3.csv)]</local-name>
+            <parent-name>[click_3.csv]</parent-name>
+            <remote-alias>cookie_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>timestamp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[timestamp (impressions.csv)]</local-name>
+            <parent-name>[impressions.csv]</parent-name>
+            <remote-alias>timestamp</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cookie_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cookie_id (impressions.csv)]</local-name>
+            <parent-name>[impressions.csv]</parent-name>
+            <remote-alias>cookie_id</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>campaign_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[campaign_id]</local-name>
+            <parent-name>[impressions.csv]</parent-name>
+            <remote-alias>campaign_id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>external_site_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[external_site_id]</local-name>
+            <parent-name>[impressions.csv]</parent-name>
+            <remote-alias>external_site_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:achats.csv_9EB482B50D104BE28F13FF4BA1647872:qk]&quot;' value='Souscriptions' />
+          <alias key='&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:click_3.csv_C770863FB8B04D6EAEA65484BF029C13:qk]&quot;' value='Clics' />
+          <alias key='&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]&quot;' value='Affichage banière' />
+        </aliases>
+      </column>
+      <column aggregation='None' datatype='integer' name='[Age (classe)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='0' formula='[age]' peg='0' size='4.25' />
+      </column>
+      <column caption='Age (copie)' datatype='integer' name='[Age (copie)_1030479894505676812]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[age]' />
+      </column>
+      <column caption='Calcul 1' datatype='datetime' name='[Calculation_1030479894463008768]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&quot;second&quot;, [timestamp],#1/1/1970#)' />
+      </column>
+      <column caption='Date' datatype='datetime' name='[Calculation_1030479894466367492]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&quot;second&quot;, [timestamp (clics_2.csv)], #1-1-1970#)' />
+      </column>
+      <column caption='Calcul 3' datatype='datetime' name='[Calculation_1030479894466596869]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&quot;second&quot;, [timestamp (impressions.csv)], #1-1-1970#)' />
+      </column>
+      <column caption='Date_3' datatype='datetime' name='[Calculation_1030479894501400587]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&quot;second&quot;, [timestamp (click_3.csv)],#1-1-1970#)' />
+      </column>
+      <column caption='Gender (copie)' datatype='string' name='[Gender (copie)_1030479894506512397]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[gender]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='achats.csv' datatype='table' name='[__tableau_internal_object_id__].[achats.csv_9EB482B50D104BE28F13FF4BA1647872]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='click_3.csv' datatype='table' name='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='clics_2.csv' datatype='table' name='[__tableau_internal_object_id__].[clics_2.csv_0A02CCDC29DA431A88383E8E5CBEE486]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='impressions.csv' datatype='table' name='[__tableau_internal_object_id__].[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Campaign Id' datatype='integer' name='[campaign_id]' role='dimension' type='ordinal' />
+      <column caption='Cookie Id (Click 3.Csv)' datatype='integer' name='[cookie_id (click_3.csv)]' role='dimension' type='ordinal' />
+      <column caption='Cookie Id (Impressions.Csv)' datatype='integer' name='[cookie_id (impressions.csv)]' role='dimension' type='ordinal' />
+      <column caption='Cookie Id' datatype='integer' name='[cookie_id]' role='dimension' type='ordinal' />
+      <column caption='Dept' datatype='integer' name='[dept]' role='measure' type='quantitative' />
+      <column caption='External Site Id' datatype='integer' name='[external_site_id]' role='dimension' type='ordinal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+      <column caption='Product Id' datatype='integer' name='[product_id]' role='dimension' type='ordinal' />
+      <column caption='Timestamp (Click 3.Csv)' datatype='integer' name='[timestamp (click_3.csv)]' role='measure' type='quantitative' />
+      <column caption='Timestamp (Clics 2.Csv)' datatype='integer' name='[timestamp (clics_2.csv)]' role='measure' type='quantitative' />
+      <column caption='Timestamp (Impressions.Csv)' datatype='integer' name='[timestamp (impressions.csv)]' role='measure' type='quantitative' />
+      <column caption='Timestamp' datatype='integer' name='[timestamp]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[achats.csv_9EB482B50D104BE28F13FF4BA1647872]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:achats.csv_9EB482B50D104BE28F13FF4BA1647872:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:click_3.csv_C770863FB8B04D6EAEA65484BF029C13:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;FR&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='timestamp' />
+        <field-sort-custom-order field='Calculation_1030479894463008768' />
+        <field-sort-custom-order field='cookie_id' />
+        <field-sort-custom-order field='product_id' />
+        <field-sort-custom-order field='gender' />
+        <field-sort-custom-order field='Gender (copie)_1030479894506512397' />
+        <field-sort-custom-order field='dept' />
+        <field-sort-custom-order field='price' />
+        <field-sort-custom-order field='age' />
+        <field-sort-custom-order field='Age (copie)_1030479894505676812' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='achats.csv' id='achats.csv_9EB482B50D104BE28F13FF4BA1647872'>
+            <properties context=''>
+              <relation connection='textscan.07uv3m01panrpk1930fi21mxzcdh' name='achats.csv' table='[achats#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='integer' name='timestamp' ordinal='0' />
+                  <column datatype='integer' name='cookie_id' ordinal='1' />
+                  <column datatype='integer' name='product_id' ordinal='2' />
+                  <column datatype='string' name='gender' ordinal='3' />
+                  <column datatype='integer' name='dept' ordinal='4' />
+                  <column datatype='integer' name='price' ordinal='5' />
+                  <column datatype='integer' name='age' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='click_3.csv' id='click_3.csv_C770863FB8B04D6EAEA65484BF029C13'>
+            <properties context=''>
+              <relation connection='textscan.1azw6ga0411k4616xt0ks0zhsli8' name='click_3.csv' table='[click_3#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=';'>
+                  <column datatype='integer' name='timestamp' ordinal='0' />
+                  <column datatype='integer' name='cookie_id' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='impressions.csv' id='impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C'>
+            <properties context=''>
+              <relation connection='textscan.1azw6ga0411k4616xt0ks0zhsli8' name='impressions.csv' table='[impressions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='integer' name='timestamp' ordinal='0' />
+                  <column datatype='integer' name='cookie_id' ordinal='1' />
+                  <column datatype='integer' name='campaign_id' ordinal='2' />
+                  <column datatype='integer' name='external_site_id' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[cookie_id]' />
+              <expression op='[cookie_id (click_3.csv)]' />
+            </expression>
+            <first-end-point object-id='achats.csv_9EB482B50D104BE28F13FF4BA1647872' />
+            <second-end-point object-id='click_3.csv_C770863FB8B04D6EAEA65484BF029C13' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[cookie_id (click_3.csv)]' />
+              <expression op='[cookie_id (impressions.csv)]' />
+            </expression>
+            <first-end-point object-id='click_3.csv_C770863FB8B04D6EAEA65484BF029C13' />
+            <second-end-point object-id='impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Feuille 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Age des clients en fonction des produits
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='clics_2+' name='federated.1j3fqnk1900mbb135kgzu03b06uo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j3fqnk1900mbb135kgzu03b06uo'>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='Avg' name='[avg:age:qk]' pivot='key' type='quantitative' />
+            <column caption='Cookie Id' datatype='integer' name='[cookie_id]' role='dimension' type='ordinal' />
+            <column-instance column='[cookie_id]' derivation='None' name='[none:cookie_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[product_id]' derivation='None' name='[none:product_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Product Id' datatype='integer' name='[product_id]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[none:product_id:ok]' value='20' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[avg:age:qk]' field-type='quantitative' max-size='1' min-size='0' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[none:cookie_id:ok]' />
+              <size column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[avg:age:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[avg:age:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[avg:age:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.56894916296005249' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1j3fqnk1900mbb135kgzu03b06uo].[avg:age:qk]</rows>
+        <cols>[federated.1j3fqnk1900mbb135kgzu03b06uo].[none:product_id:ok]</cols>
+      </table>
+      <simple-id uuid='{B4A80EE5-5E2D-4511-AA51-1DAE65C41A21}' />
+    </worksheet>
+    <worksheet name='Feuille 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Clics sur les bannières&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='clics_2+' name='federated.1j3fqnk1900mbb135kgzu03b06uo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j3fqnk1900mbb135kgzu03b06uo'>
+            <_.fcp.ObjectModelTableType.false...column caption='click_3.csv' datatype='integer' name='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' role='measure' type='quantitative' />
+            <column caption='Date_3' datatype='datetime' name='[Calculation_1030479894501400587]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATEADD(&quot;second&quot;, [timestamp (click_3.csv)],#1-1-1970#)' />
+            </column>
+            <_.fcp.ObjectModelTableType.true...column caption='click_3.csv' datatype='table' name='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:click_3.csv_C770863FB8B04D6EAEA65484BF029C13:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1030479894501400587]' derivation='MDY' name='[md:Calculation_1030479894501400587:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1030479894501400587]' derivation='Hour-Trunc' name='[thr:Calculation_1030479894501400587:qk]' pivot='key' type='quantitative' />
+            <column caption='Timestamp (Click 3.Csv)' datatype='integer' name='[timestamp (click_3.csv)]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[md:Calculation_1030479894501400587:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[md:Calculation_1030479894501400587:ok]' member='20251130' />
+              <groupfilter function='member' level='[md:Calculation_1030479894501400587:ok]' member='20251201' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1j3fqnk1900mbb135kgzu03b06uo].[md:Calculation_1030479894501400587:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:click_3.csv_C770863FB8B04D6EAEA65484BF029C13:qk]</rows>
+        <cols>[federated.1j3fqnk1900mbb135kgzu03b06uo].[thr:Calculation_1030479894501400587:qk]</cols>
+        <show-full-range>
+          <column>[federated.1j3fqnk1900mbb135kgzu03b06uo].[none:Age (classe):qk]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{AD937B11-5CD3-4118-8268-CBBA57E6E29A}' />
+    </worksheet>
+    <worksheet name='Feuille 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;Chiffres d&apos;affaires&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='clics_2+' name='federated.1j3fqnk1900mbb135kgzu03b06uo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j3fqnk1900mbb135kgzu03b06uo'>
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' value='c#,##0.00&quot; €&quot;;-#,##0.00&quot; €&quot;' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' value='' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' value='false' />
+            <format attr='alternate-text' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' value='' />
+            <format attr='display-alternate-text' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[sum:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3D20624E-3B32-4073-90AA-EC14F21298C8}' />
+    </worksheet>
+    <worksheet name='Feuille 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Entonnoir de conversion</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='clics_2+' name='federated.1j3fqnk1900mbb135kgzu03b06uo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j3fqnk1900mbb135kgzu03b06uo'>
+            <_.fcp.ObjectModelTableType.false...column caption='click_3.csv' datatype='integer' name='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='achats.csv' datatype='table' name='[__tableau_internal_object_id__].[achats.csv_9EB482B50D104BE28F13FF4BA1647872]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='click_3.csv' datatype='table' name='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[achats.csv_9EB482B50D104BE28F13FF4BA1647872]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:achats.csv_9EB482B50D104BE28F13FF4BA1647872:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[click_3.csv_C770863FB8B04D6EAEA65484BF029C13]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:click_3.csv_C770863FB8B04D6EAEA65484BF029C13:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='impressions.csv' datatype='integer' name='[__tableau_internal_object_id__].[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='impressions.csv' datatype='table' name='[__tableau_internal_object_id__].[impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='achats.csv' datatype='integer' name='[__tableau_internal_object_id__].[achats.csv_9EB482B50D104BE28F13FF4BA1647872]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:click_3.csv_C770863FB8B04D6EAEA65484BF029C13:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:achats.csv_9EB482B50D104BE28F13FF4BA1647872:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1j3fqnk1900mbb135kgzu03b06uo].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:click_3.csv_C770863FB8B04D6EAEA65484BF029C13:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:achats.csv_9EB482B50D104BE28F13FF4BA1647872:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1j3fqnk1900mbb135kgzu03b06uo].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values]' field-type='quantitative' major-origin='0.0' major-show='false' major-spacing='10000.0' minor-origin='0.0' minor-show='false' minor-spacing='1000.0' reverse='true' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values]' scope='cols' value='' />
+            <format attr='title' class='1' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values]' scope='cols' value='' />
+            <format attr='tick-color' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]' value='#4e79a7' />
+            <encoding attr='space' class='1' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values]' field-type='quantitative' major-origin='0.0' major-show='false' major-spacing='10000.0' minor-origin='0.0' minor-show='false' minor-spacing='1000.0' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]' value='' />
+            <format attr='height' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[:Measure Names]' value='104' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1j3fqnk1900mbb135kgzu03b06uo].[__tableau_internal_object_id__].[cnt:impressions.csv_D6B0CAC9DA6E43BA9236C482411E4F0C:qk]' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1j3fqnk1900mbb135kgzu03b06uo].[:Measure Names]</rows>
+        <cols>([federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values] + [federated.1j3fqnk1900mbb135kgzu03b06uo].[Multiple Values])</cols>
+      </table>
+      <simple-id uuid='{75CA716C-0DB9-4649-B4EA-B047C08F45E2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Tableau de bord 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='49200' x='800' y='1000'>
+            <zone fixed-size='531' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='49200' x='800' y='1000'>
+              <zone h='15875' id='20' name='Feuille 3' w='49200' x='800' y='1000'>
+                <layout-cache fixed-size-h='119' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='82125' id='3' name='Feuille 1' w='49200' x='800' y='16875'>
+                <layout-cache minheight='183' type-h='scalable' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='49000' id='15' name='Feuille 2' w='49200' x='50000' y='1000'>
+            <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49000' id='21' name='Feuille 5' w='49200' x='50000' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='24' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='119' h='15875' id='20' is-fixed='true' name='Feuille 3' w='49200' x='800' y='1000'>
+                  <layout-cache fixed-size-h='119' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='15' is-fixed='true' name='Feuille 2' w='49200' x='50000' y='1000'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='82125' id='3' is-fixed='true' name='Feuille 1' w='49200' x='800' y='16875'>
+                  <layout-cache minheight='183' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='21' is-fixed='true' name='Feuille 5' w='49200' x='50000' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{935C7BC4-F01D-4447-BD40-15C77DFC0445}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Feuille 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='0' param='[federated.1j3fqnk1900mbb135kgzu03b06uo].[avg:age:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{637D9D4F-5435-40E0-AFC6-7C3FB3F984E2}' />
+    </window>
+    <window class='worksheet' name='Feuille 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+          <strip size='170'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4C60E8EC-DE64-40FE-B5C6-AEFA272998C7}' />
+    </window>
+    <window class='worksheet' name='Feuille 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F98C4C2A-41C0-4BB7-8CCD-41255DE543D0}' />
+    </window>
+    <window class='worksheet' name='Feuille 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{23202CAD-BF0E-4F26-986C-8EEC4D575FD8}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Tableau de bord 1'>
+      <viewpoints>
+        <viewpoint name='Feuille 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Feuille 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Feuille 3' />
+        <viewpoint name='Feuille 5' />
+      </viewpoints>
+      <active id='20' />
+      <simple-id uuid='{2B9A969E-B7DD-4273-B1E5-1F92366C1129}' />
+    </window>
+  </windows>
+</workbook>
